@@ -11,7 +11,7 @@ namespace Sistem_Point_Of_Sales.Models
         public double Price { get; set; }
         public int stock { get; set; }
         public string? category { get; set; }
-        public List<ProductTags> ProductTags { get; } = new();
+        public virtual ICollection<ProductTags>? ProductTags { get; set; } 
 
     }
 }

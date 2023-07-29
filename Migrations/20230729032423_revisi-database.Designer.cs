@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Sistem_Point_Of_Sales.Models;
 
@@ -10,9 +11,11 @@ using Sistem_Point_Of_Sales.Models;
 namespace Sistem_Point_Of_Sales.Migrations
 {
     [DbContext(typeof(AppDbClass))]
-    partial class AppDbClassModelSnapshot : ModelSnapshot
+    [Migration("20230729032423_revisi-database")]
+    partial class revisidatabase
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -7,6 +7,6 @@ namespace Sistem_Point_Of_Sales.Models
         [Key]
         public int Id { get; set; }
         public string? Name { get; set; }
-        public List<ProductTags> ProductTags { get; } = new();
+        public virtual ICollection<ProductTags>? ProductTags { get; set; }
     }
 }
