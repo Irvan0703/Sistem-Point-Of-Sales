@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Sistem_Point_Of_Sales.Interface;
 using Sistem_Point_Of_Sales.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -6,6 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<AppDbClass>(con => con.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddTransient<IProduct, ProductDetail>();
 
 var app = builder.Build();
 

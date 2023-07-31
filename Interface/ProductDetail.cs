@@ -16,6 +16,7 @@ namespace Sistem_Point_Of_Sales.Interface
             {
                 await _appDbClass.Products.AddAsync(products);
                 await _appDbClass.Tags.AddAsync(tags);
+                //await _appDbClass.ProductTags.AddAsync(products,tags);
                 await _appDbClass.SaveChangesAsync();
                 return products.Id;
             }

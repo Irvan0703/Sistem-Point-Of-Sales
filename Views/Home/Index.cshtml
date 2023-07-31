@@ -10,23 +10,23 @@
         <table class="table table-responsive bg-light">
             <thead>
                 <tr>
-                    <td>First Name</td>
-                    <td>Last Name</td>
-                    <td>Designation</td>
-                    <td>Salary</td>
-                    <td>Joining Date</td>
+                    <td>Name</td>
+                    <td>Description</td>
+                    <td>Price</td>
+                    <td>Stock</td>
+                    <td>Category</td>
                     <td>Action</td>
                 </tr>
             </thead>
             <tbody>
-                @foreach (var item in ViewBag.Employee)
+                @foreach (var item in ViewBag.Product)
                 {
                     <tr>
-                        <td>@item.firstName</td>
-                        <td>@item.lastName</td>
-                        <td>@item.job</td>
-                        <td>@item.salary</td>
-                        <td>@item.hiredate</td>
+                        <td>@item.Name</td>
+                        <td>@item.Description</td>
+                        <td>@item.Price</td>
+                        <td>@item.stock</td>
+                        <td>@item.Category</td>
                         <td><a asp-controller="Home" asp-action="Edit" asp-route-id="@item.id">Edit</a></td>
                         <td><a asp-controller="Home" asp-action="Delete" asp-route-id="@item.id">Delete</a></td>
                     </tr>
